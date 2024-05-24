@@ -54,7 +54,7 @@ export const data = {
         },
     ],
 };
-export const Statystyki = () => {
+export const StatystykiSamochodowe = () => {
     return (
         <Container className="p-4 mt-5 text-center">
             <h1 className="border-bottom p-3">Statystyki</h1>
@@ -84,4 +84,4 @@ export const Statystyki = () => {
     );
 }
 
-export default Statystyki;
+export default StatystykiSamochodowe;

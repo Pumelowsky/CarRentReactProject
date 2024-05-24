@@ -12,8 +12,9 @@ import { Pracownik } from './pracownik/PracownikPage.jsx'
 import { Pracownicy } from './pracownik/PracownicyPage.jsx'
 import { Layout } from './layout/Layout.jsx';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Statystyki from './towar/Statystyki.jsx';
+import StatystykiSamochodowe from './towar/StatystykiSamochodowe.jsx';
 import Kontakt from './Kontakt.jsx';
+import StatystykiPracownicze from './pracownik/StatystykiPracownicze.jsx';
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -40,7 +41,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                     <Route index element={<Kontakt />} />
                 </Route>
                 <Route path='/statystyki' element={<Layout />}>
-                    <Route index element={<Statystyki />} />
+                    <Route index element={<StatystykiSamochodowe />} />
+                </Route>
+                <Route path='/statystyki_p' element={<Layout />}>
+                    <Route index element={<StatystykiPracownicze />} />
                 </Route>
             </Routes>
         </BrowserRouter>

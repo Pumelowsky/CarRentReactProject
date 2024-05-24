@@ -10,3 +10,14 @@ a{
 #navbarScrollingDropdown {
     color: white;
 }
+
+
+.doughnut-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.doughnut-wrapper {
+    width: 100%;
+}

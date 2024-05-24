@@ -18,7 +18,7 @@ export const Pracownicy = () => {
                 {employees.map((employee) => (
                     <Col key={employee.id} xs={12} sm={6} md={4} lg={3}>
                         <Card className="mb-4">
-                            <Card.Img variant="top" src='https://via.placeholder.com/150' />
+                            <Card.Img variant="top" src='/image/person.jpg' />
                             <Card.Body>
                                 <Card.Title>{employee.name}</Card.Title>
                                 <Card.Subtitle className="mb-2 text-muted">{employee.position}</Card.Subtitle>
