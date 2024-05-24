@@ -12,6 +12,8 @@ import { Pracownik } from './pracownik/PracownikPage.jsx'
 import { Pracownicy } from './pracownik/PracownicyPage.jsx'
 import { Layout } from './layout/Layout.jsx';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Statystyki from './towar/Statystyki.jsx';
+import Kontakt from './Kontakt.jsx';
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -35,7 +37,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                     <Route index element={<Pracownicy />} />
                 </Route>
                 <Route path='/kontakt' element={<Layout />}>
-                    <Route index element={<Pracownicy />} />
+                    <Route index element={<Kontakt />} />
+                </Route>
+                <Route path='/statystyki' element={<Layout />}>
+                    <Route index element={<Statystyki />} />
                 </Route>
             </Routes>
         </BrowserRouter>

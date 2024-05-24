@@ -29,7 +29,7 @@ export const Navi = () => {
                               <Link to="/towary" className="d-block">Samochochody</Link>
                           </NavDropdown.Item>
                           <NavDropdown.Divider />
-                          <NavDropdown.Item href="#action5">
+                          <NavDropdown.Item href="/statystyki">
                               Statystyki
                           </NavDropdown.Item>
                       </NavDropdown>
