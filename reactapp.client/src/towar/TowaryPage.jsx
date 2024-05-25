@@ -1,13 +1,81 @@
-import Container from 'react-bootstrap/Container';
-import Table from 'react-bootstrap/Table';
+﻿import Container from 'react-bootstrap/Container';
+import Card from 'react-bootstrap/Card';
 import Accordion from 'react-bootstrap/Accordion';
 import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 export const Towary = () => {
+    const cars = [
+        {
+            id: 1,
+            Marka: "Opel",
+            Model: "Zafira",
+            VIN: "W0L0TGF75G1234567",
+            Cena: 600,
+            Kategoria: "Elektryk"
+        },
+        {
+            id: 2,
+            Marka: "Kia",
+            Model: "Carens",
+            VIN: "KNAGF4A78F1234567",
+            Cena: 750,
+            Kategoria: "Sport"
+        },
+        {
+            id: 3,
+            Marka: "Toyota",
+            Model: "Proace City Verso",
+            VIN: "JTDFR320501234567",
+            Cena: 800,
+            Kategoria: "VAN"
+        },
+        {
+            id: 4,
+            Marka: "Ford",
+            Model: "Tourneo Connect",
+            VIN: "WF0XXXTTFX1234567",
+            Cena: 700,
+            Kategoria: "Sport"
+        },
+        {
+            id: 5,
+            Marka: "Volkswagen",
+            Model: "Caddy",
+            VIN: "WV1ZZZ2KZ12345678",
+            Cena: 720,
+            Kategoria: "VAN"
+        },
+        {
+            id: 6,
+            Marka: "Citroën",
+            Model: "Berlingo",
+            VIN: "VF77XXXXX12345678",
+            Cena: 280,
+            Kategoria: "Elektryk"
+        },
+        {
+            id: 7,
+            Marka: "Peugeot",
+            Model: "Rifter",
+            VIN: "VF3YXXXXX12345678",
+            Cena: 300,
+            Kategoria: "VAN"
+        },
+        {
+            id: 8,
+            Marka: "Fiat",
+            Model: "Doblo",
+            VIN: "ZFA26300012345678",
+            Cena: 160,
+            Kategoria: "VAN"
+        }
+    ];
     return (
         <Container fluid className="m-5">
+            <h1 className="border-bottom p-3">Nasza flota</h1>
             <Accordion defaultActiveKey="0" className="mb-5">
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>Filtrowanie listy</Accordion.Header>
@@ -48,40 +116,27 @@ export const Towary = () => {
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
-            <Table striped bordered hover>
-                <thead>
-                    <tr>
-                        <th>Marka</th>
-                        <th>Model</th>
-                        <th>Kategoria</th>
-                        <th>VIN</th>
-                        <th>Cena za 24H</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Honda</td>
-                        <td>Civic</td>
-                        <td>Sport</td>
-                        <td>111111111111111111</td>
-                        <td>111</td>
-                    </tr>
-                    <tr>
-                        <td>Ford</td>
-                        <td>Focus ST</td>
-                        <td>Sport</td>
-                        <td>222222222222222222</td>
-                        <td>222</td>
-                    </tr>
-                    <tr>
-                        <td>Opel</td>
-                        <td>Vivaro</td>
-                        <td>VAN</td>
-                        <td>333333333333333333</td>
-                        <td>333</td>
-                    </tr>
-                </tbody>
-            </Table>
+            
+            <Row>
+                {cars.map((car) => (
+                    <Col key={car.id} xs={12} sm={6} md={4} lg={3}>
+                        <Card className="mb-4">
+                            <Card.Img variant="top" src='/image/car1.png' />
+                            <Card.Body>
+                                <Card.Title>{car.Marka} {car.Model}</Card.Title>
+                                <Card.Subtitle className="mb-2 text-muted">Kategoria: {car.Kategoria}</Card.Subtitle>
+                                <Card.Text>
+                                    <p>Cena najmu: {car.Cena} zł/24h</p>
+                                    <p className="text-muted">VIN: {car.VIN}</p>
+                                    <Button variant="primary" type="submit">
+                                        Sprawdź ofertę
+                                    </Button>
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                ))}
+            </Row>
         </Container>
        
     )

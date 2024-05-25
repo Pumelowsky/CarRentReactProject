@@ -3,6 +3,7 @@
 export const Pracownik = () => {
     return (
         <Container fluid className="m-5">
+            <h1 className="border-bottom p-3">Dodawanie pracownika</h1>
             <Form>
                 <Tabs defaultActiveKey="danePodstawowe" id="danePracownika" className="mb-3">
                     <Tab eventKey="danePodstawowe" title="Dane podstawowe">
