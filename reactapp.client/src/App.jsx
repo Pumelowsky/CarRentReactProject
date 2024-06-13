@@ -1,6 +1,6 @@
 ﻿import Aktualnosci from './Aktualnosci';
 import './App.css';
-
+import { Link } from 'react-router-dom';
 import { Container, Row, Col, Button, Card } from 'react-bootstrap';
 function App() {
     return (
@@ -8,7 +8,7 @@ function App() {
             <Container className="mt-5 m-4 text-center">
                 <h1>Witaj w Wypożyczalni Samochodowej</h1>
                 <p>Znajdź swój idealny samochód już dziś!</p>
-                <Button variant="primary">Zobacz Ofertę</Button>
+                <Link to="/towary"><Button variant="primary">Zobacz Ofertę</Button></Link>
             </Container>
             <Container className="mt-5 m-4 text-center">
                 <Aktualnosci />

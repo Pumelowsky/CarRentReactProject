@@ -1,7 +1,17 @@
 ﻿import { Container, Nav, Navbar, NavDropdown, Button, Form, Image} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { Telephone } from 'react-bootstrap-icons';
+import Swal from 'sweetalert2';
+
 export const Navi = () => {
+    const handleShow = () => {
+        event.preventDefault();
+        Swal.fire({
+            title: "+48 123 456 789",
+            text: "Masz pytanie? Zadzwoń",
+            icon: "question"
+        });
+    }
   return (
       <Navbar expand="lg" className="bg-primary">
           <Container fluid>
@@ -50,7 +60,7 @@ export const Navi = () => {
                       </Nav.Link>
                   </Nav>
                   <Form className="d-flex">
-                      <Button variant="outline-light">Zadzwoń <Telephone/></Button>
+                      <Button variant="outline-light" onClick={handleShow}>Zadzwoń <Telephone/></Button>
                   </Form>
               </Navbar.Collapse>
           </Container>

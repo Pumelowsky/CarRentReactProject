@@ -14,7 +14,8 @@ export const Towary = () => {
             Model: "Zafira",
             VIN: "W0L0TGF75G1234567",
             Cena: 600,
-            Kategoria: "Elektryk"
+            Kategoria: "Elektryk",
+            img: 'image/auto1.png'
         },
         {
             id: 2,
@@ -22,7 +23,8 @@ export const Towary = () => {
             Model: "Carens",
             VIN: "KNAGF4A78F1234567",
             Cena: 750,
-            Kategoria: "Sport"
+            Kategoria: "Sport",
+            img: 'image/auto2.png'
         },
         {
             id: 3,
@@ -30,7 +32,8 @@ export const Towary = () => {
             Model: "Proace City Verso",
             VIN: "JTDFR320501234567",
             Cena: 800,
-            Kategoria: "VAN"
+            Kategoria: "VAN",
+            img: 'image/auto3.png'
         },
         {
             id: 4,
@@ -38,7 +41,8 @@ export const Towary = () => {
             Model: "Tourneo Connect",
             VIN: "WF0XXXTTFX1234567",
             Cena: 700,
-            Kategoria: "Sport"
+            Kategoria: "Sport",
+            img: 'image/auto4.png'
         },
         {
             id: 5,
@@ -46,31 +50,35 @@ export const Towary = () => {
             Model: "Caddy",
             VIN: "WV1ZZZ2KZ12345678",
             Cena: 720,
-            Kategoria: "VAN"
+            Kategoria: "VAN",
+            img: 'image/auto5.png'
         },
         {
             id: 6,
-            Marka: "Citroën",
-            Model: "Berlingo",
+            Marka: "Alfa Romeo",
+            Model: "Giulia",
             VIN: "VF77XXXXX12345678",
             Cena: 280,
-            Kategoria: "Elektryk"
+            Kategoria: "Sport",
+            img: 'image/auto6.png'
         },
         {
             id: 7,
-            Marka: "Peugeot",
-            Model: "Rifter",
+            Marka: "Ford",
+            Model: "Mustang",
             VIN: "VF3YXXXXX12345678",
             Cena: 300,
-            Kategoria: "VAN"
+            Kategoria: "Sport",
+            img: 'image/auto7.png'
         },
         {
             id: 8,
-            Marka: "Fiat",
-            Model: "Doblo",
+            Marka: "Volkswagen",
+            Model: "Golf R",
             VIN: "ZFA26300012345678",
             Cena: 160,
-            Kategoria: "VAN"
+            Kategoria: "VAN",
+            img: 'image/auto8.png'
         }
     ];
     return (
@@ -121,7 +129,7 @@ export const Towary = () => {
                 {cars.map((car) => (
                     <Col key={car.id} xs={12} sm={6} md={4} lg={3}>
                         <Card className="mb-4">
-                            <Card.Img variant="top" src='/image/car1.png' />
+                            <Card.Img variant="top" src={car.img} />
                             <Card.Body>
                                 <Card.Title>{car.Marka} {car.Model}</Card.Title>
                                 <Card.Subtitle className="mb-2 text-muted">Kategoria: {car.Kategoria}</Card.Subtitle>
