@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { Link } from 'react-router-dom';
 
 export const Towary = () => {
     const cars = [
@@ -136,9 +137,11 @@ export const Towary = () => {
                                 <Card.Text>
                                     <p>Cena najmu: {car.Cena} zł/24h</p>
                                     <p className="text-muted">VIN: {car.VIN}</p>
-                                    <Button variant="primary" type="submit">
-                                        Sprawdź ofertę
-                                    </Button>
+                                    <Link to="/rent">
+                                        <Button variant="primary" type="submit">
+                                            Wynajmij
+                                        </Button>
+                                    </Link>
                                 </Card.Text>
                             </Card.Body>
                         </Card>

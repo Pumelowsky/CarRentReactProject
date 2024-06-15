@@ -22,12 +22,12 @@ function App() {
                         <Card>
                             <Card.Img variant="top" src="image/car1.png" />
                             <Card.Body>
-                                <Card.Title>Samochód 1</Card.Title>
+                                <Card.Title>Skoda Superb</Card.Title>
                                 <Card.Text>
-                                    Opis samochodu 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Škoda Superb to przestronny sedan, który łączy elegancję z wygodą. Bogate wyposażenie i zaawansowane systemy bezpieczeństwa sprawiają, że jest to doskonały wybór na dłuższe podróże oraz komfortową jazdę na co dzień.
                                 </Card.Text>
                                 <Card.Subtitle className="mb-2 text-muted">Cena: 3500.00zł/mies.</Card.Subtitle>
-                                <Button variant="primary">Wynajmij</Button>
+                                <Link to="/rent"><Button variant="primary">Wynajmij</Button></Link>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -35,12 +35,12 @@ function App() {
                         <Card>
                             <Card.Img variant="top" src="image/car2.png" />
                             <Card.Body>
-                                <Card.Title>Samochód 2</Card.Title>
+                                <Card.Title>Fiat Punto</Card.Title>
                                 <Card.Text>
-                                    Opis samochodu 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Fiat Punto to zwinne i ekonomiczne auto miejskie, idealne do codziennej jazdy. Dzięki kompaktowym rozmiarom łatwo nim manewrować w miejskim ruchu, a oszczędny silnik zapewnia niskie zużycie paliwa.
                                 </Card.Text>
                                 <Card.Subtitle className="mb-2 text-muted">Cena: 1200.00zł/mies.</Card.Subtitle>
-                                <Button variant="primary">Wynajmij</Button>
+                                <Link to="/rent"><Button variant="primary">Wynajmij</Button></Link>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -48,12 +48,12 @@ function App() {
                         <Card>
                             <Card.Img variant="top" src="image/car3.png" />
                             <Card.Body>
-                                <Card.Title>Samochód 3</Card.Title>
+                                <Card.Title>Audi RS4</Card.Title>
                                 <Card.Text>
-                                    Opis samochodu 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Audi RS4 to sportowe kombi, które oferuje niesamowite osiągi i luksus. Z mocnym silnikiem V6 i zaawansowanym napędem na cztery koła, każda podróż staje się ekscytującą przygodą, a eleganckie wnętrze zapewnia maksymalny komfort.
                                 </Card.Text>
                                 <Card.Subtitle className="mb-2 text-muted">Cena: 2000.00zł/mies.</Card.Subtitle>
-                                <Button variant="primary">Wynajmij</Button>
+                                <Link to="/rent"><Button variant="primary">Wynajmij</Button></Link>
                             </Card.Body>
                         </Card>
                     </Col>

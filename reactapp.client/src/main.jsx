@@ -15,6 +15,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import StatystykiSamochodowe from './towar/StatystykiSamochodowe.jsx';
 import Kontakt from './Kontakt.jsx';
 import StatystykiPracownicze from './pracownik/StatystykiPracownicze.jsx';
+import RentPage from './towar/RentPage.jsx';
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -45,6 +46,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                 </Route>
                 <Route path='/statystyki_p' element={<Layout />}>
                     <Route index element={<StatystykiPracownicze />} />
+                </Route>
+                <Route path='/rent' element={<Layout />}>
+                    <Route index element={<RentPage />} />
                 </Route>
             </Routes>
         </BrowserRouter>
